@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="SwitchCrossing">
+		<jta-data-source>java:/MYSQLDB</jta-data-source>
+		<class>com.ifsttar.entity.Accessoire</class>
+		<class>com.ifsttar.entity.Crossing</class>
+		<class>com.ifsttar.entity.Junction</class>
+		<class>com.ifsttar.entity.Maintenance</class>
+		<class>com.ifsttar.entity.Position_Detector</class>
+		<class>com.ifsttar.entity.Region</class>
+		<class>com.ifsttar.entity.Role</class>
+		<class>com.ifsttar.entity.Station</class>
+		<class>com.ifsttar.entity.Switch_Heater</class>
+		<class>com.ifsttar.entity.Switch_Motor</class>
+		<class>com.ifsttar.entity.Switch_Roller</class>
+		<class>com.ifsttar.entity.Switcht</class>
+		<class>com.ifsttar.entity.Test</class>
+		<class>com.ifsttar.entity.Track</class>
+		<class>com.ifsttar.entity.User</class>
+			<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>

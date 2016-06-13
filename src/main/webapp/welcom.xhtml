@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<body> 
+<p:panel header=" Espace Authentification">
+				<h:form id="loginForm">
+					<p:growl id="msg" showDetail="true" life="3000" />
+					<div align="center" style="margin-top: 5%;">
+						<p:outputPanel style="color: #40bfff; font-weight:bold;font-size:14pt;">Login</p:outputPanel>
+                     <h:panelGrid columns="2">
+                              
+                              <br />
+                              <br />
+								<h:outputText value="Username" style="color: #7f40ff; font-size: 11px; font-weight: bold" />
+                                &#160;&#160;
+								<p:inputText id="Username" value="#{sessionManager.login}" ></p:inputText>
+
+								<p:spacer></p:spacer>
+
+								<p:message for="Username"></p:message>
+                                <br />
+								<h:outputText value="Password" style="color: #7f40ff; font-size: 11px; font-weight: bold" />
+                                &#160;&#160;
+								<p:password id="Password" value="#{sessionManager.password}"
+									feedback="false"></p:password>
+
+</h:panelGrid>
+								<p:spacer></p:spacer>
+
+								<p:message for="Password"></p:message>
+
+								<p:spacer></p:spacer>
+					    <br /><br />
+						<p:commandButton action="#{sessionManager.loginUser()}" value="Login" ajax="true" style="width:70px;height:30px">
+					    </p:commandButton>
+
+					</div>
+
+				</h:form>
+
+</p:panel>
+</body> 
+</html>

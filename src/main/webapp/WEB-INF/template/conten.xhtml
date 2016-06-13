@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+
+
+<f:view contentType="text/html" id="fview">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Authentification</title>
+    <ui:debug />
+    <f:metadata>
+        <ui:insert name="metadata" />
+    </f:metadata>
+    
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta content="no-cache" http-equiv="Pragma" />
+	<meta content="no-cache" http-equiv="Cache-Control" />
+	<meta content="no-store" http-equiv="Cache-Control" />
+	<meta content="must-revalidate" http-equiv="Cache-Control" />
+	<link rel="stylesheet" media="screen"
+		href="css/primefaces_override.css" type="text/css" />
+	<link rel="stylesheet" media="screen"
+		href="css/cssLayout.css" type="text/css" />
+	<link rel="stylesheet" media="screen"
+		href="css/default.css" type="text/css" />
+	<link rel="stylesheet" media="screen"
+		href="css/ocm_screen.css" type="text/css" />
+	<link rel="stylesheet" media="print"
+		href="css/form.css" type="text/css" />
+	<script type="text/javascript" src="js/popup.js"></script>
+	<link rel="shortcut icon" type="image/x-icon"
+		href="images/favicon.ico" />
+
+
+</h:head>
+
+<h:body>
+
+	<div id="topTemplate" style="background-color: #1E90FF">
+		<ui:insert name="top">
+		<p:panel>
+					<div align="left">
+					<h:graphicImage url="images/logoA_MT.png" />
+					&#160;
+				   </div>
+		</p:panel>
+					</ui:insert>
+	
+	</div>
+	
+    &#160;
+    <h:outputText value="User : #{loginBean.uname}" style="color: white; font-size: 10px; font-weight: bold"/>
+
+    <div id="frame" style="height: 400px;">
+
+		<div id="content" class="center_content">
+		
+			<ui:insert name="content">
+
+			</ui:insert>
+
+		</div>
+	
+
+    </div>
+
+	<div id="bottom" align="center">
+		
+			<div id="bottomFrame"> &copy; Powered By IFSTTAR
+			</div>
+
+	</div> 
+
+
+</h:body> 
+</f:view>
+</html>
